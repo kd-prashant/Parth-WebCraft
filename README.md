@@ -6,7 +6,7 @@ A modern and responsive developer portfolio built using **Next.js, TypeScript, a
 
 ## 🌐 Live Demo
 
-👉 (Add your Vercel link here after deployment)
+👉 https://parth-web-craft.vercel.app/ (Live Portfolio)
 
 ---
 
