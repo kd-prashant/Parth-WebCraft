@@ -30,7 +30,7 @@ const portfolioProjects = [
       { title: "Monitors plant health with real-time insights" },
       { title: "Provides treatment recommendations for farmers" },
     ],
-    link: "",
+    link: "https://niramay-ai.vercel.app/",
     image: projectCropHealth,
   },
   {
@@ -99,16 +99,30 @@ const Projects = () => {
                       </li>
                     ))}
                   </ul>
-                  <button
-                    className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 opacity-60 cursor-not-allowed"
-                    disabled
-                  >
-                    <span>Visit Live Site</span>
-                    <ArrowUpRightIcon className="size-4" />
-                  </button>
-                  <p className="text-xs text-white/30 mt-2 mb-4 lg:mb-0">
-                    Coming soon
-                  </p>
+                  {project.link ? (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 hover:bg-gray-100 transition"
+                    >
+                      <span>Visit Live Site</span>
+                      <ArrowUpRightIcon className="size-4" />
+                    </a>
+                  ) : (
+                    <>
+                      <button
+                        className="bg-white text-gray-950 h-12 w-full md:w-auto px-6 rounded-xl font-semibold inline-flex items-center justify-center gap-2 mt-8 opacity-60 cursor-not-allowed"
+                        disabled
+                      >
+                        <span>Visit Live Site</span>
+                        <ArrowUpRightIcon className="size-4" />
+                      </button>
+                      <p className="text-xs text-white/30 mt-2 mb-4 lg:mb-0">
+                        Coming soon
+                      </p>
+                    </>
+                  )}
                 </div>
                 <div className="relative">
                   <Image
