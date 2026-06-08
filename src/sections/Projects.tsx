@@ -54,7 +54,7 @@ const portfolioProjects = [
       { title: "Transforms manual ETL into intelligent pipelines" },
       { title: "Automated data mapping & normalization" },
     ],
-    link: "https://intelli-migrate.vercel.app/",
+    link: "https://new-intelli-migrate.pages.dev/",
     image: projectIntelliMigrate,
   },
 ];
