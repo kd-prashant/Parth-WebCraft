@@ -7,6 +7,7 @@ import CheckCircleIcon from "@/assets/icons/check-circle.svg";
 import ArrowUpRightIcon from "@/assets/icons/arrow-up-right.svg";
 import SectionHeader from "@/components/SectionHeader";
 import Card from "@/components/Card";
+import StickyLanyard from "@/components/StickyLanyard";
 
 const portfolioProjects = [
   {
@@ -61,7 +62,8 @@ const portfolioProjects = [
 
 const Projects = () => {
   return (
-    <section className="pb-16 lg:py-24" id="projects">
+    <section className="pb-16 lg:py-24 relative" id="projects">
+      <StickyLanyard />
       <div className="container">
         <SectionHeader
           eyebrow="Real-world Results"

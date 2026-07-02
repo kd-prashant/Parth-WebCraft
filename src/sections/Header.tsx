@@ -4,6 +4,14 @@ import { useEffect, useState } from "react";
 const Header = () => {
   const [activeSection, setActiveSection] = useState("home");
 
+  // Force scroll to top on reload/mount
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.history.scrollRestoration = 'manual';
+      window.scrollTo(0, 0);
+    }
+  }, []);
+
   useEffect(() => {
     const handleScroll = () => {
       const sections = document.querySelectorAll("section[id], div[id]");

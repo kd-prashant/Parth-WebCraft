@@ -124,7 +124,7 @@ const Hero = () => {
             Turning Caffeine into Code
           </p>
           <p className="mt-4 text-center text-white/60 md:text-lg">
-            I speak C++, Python, Java, and fluent MERN. Currently debugging the future, one commit at a time. My rubber duck has seen things it cannot unsee.
+            I speak C++, Python, Java, and fluent MERN. Currently debugging the future, one commit at a time.
           </p>
         </div>
         <div className="flex flex-col md:flex-row justify-center items-center mt-8 gap-4">
