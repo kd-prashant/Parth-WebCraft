@@ -16,8 +16,9 @@ export default function StickyLanyard() {
       // The marker's position relative to the document top
       const markerTop = marker.getBoundingClientRect().top + window.scrollY;
       
-      // If we have scrolled far enough that the marker is within or above the viewport
-      if (window.scrollY + window.innerHeight > markerTop) {
+      // Only show the lanyard when the user has scrolled down to the Projects section
+      // (meaning the top of the Projects section is near the top of the viewport)
+      if (window.scrollY > markerTop - 300) {
         setVisible(true);
       } else {
         setVisible(false);
