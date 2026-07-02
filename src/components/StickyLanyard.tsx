@@ -10,17 +10,23 @@ export default function StickyLanyard() {
   const markerRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    const marker = markerRef.current;
-    if (!marker) return;
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        // Show if the marker is on-screen OR has scrolled past the top of the viewport
-        setVisible(entry.isIntersecting || entry.boundingClientRect.top < 0);
-      },
-      { threshold: 0 }
-    );
-    observer.observe(marker);
-    return () => observer.disconnect();
+    const handleScroll = () => {
+      const marker = markerRef.current;
+      if (!marker) return;
+      // The marker's position relative to the document top
+      const markerTop = marker.getBoundingClientRect().top + window.scrollY;
+      
+      // If we have scrolled far enough that the marker is within or above the viewport
+      if (window.scrollY + window.innerHeight > markerTop) {
+        setVisible(true);
+      } else {
+        setVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    handleScroll(); // initial check
+    return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
   return (
