@@ -112,7 +112,7 @@ const Hero = () => {
               <div className="bg-green-500 absolute inset-0 rounded-full animate-ping-lg"></div>
             </div>
             <div className="text-sm font-medium">
-              Got an Idea? I've Got the Code
+              Got an Idea? I&apos;ve Got the Code
             </div>
           </div>
         </div>
